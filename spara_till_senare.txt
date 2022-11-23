@@ -1,0 +1,27 @@
+<div class="article_upper_half">
+        <article id="article_1">
+            About Us
+        </article>
+
+        <article id="article_2">
+            Contacts
+        </article>
+
+        <article id="article_3">
+            Bild/searchbar 
+        </article>
+    </div>
+
+    <div class="article_lower_half">
+        <article id="article_4">
+            Tjenare
+        </article>
+
+        <article id="article_5">
+                Anka
+        </article>
+
+        <article id="article_6">
+            Potatis
+        </article>
+     </div>

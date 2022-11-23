@@ -1,0 +1,54 @@
+h1 {
+    font-family: 'Patrick Hand', cursive;
+}
+
+h2 {
+    font-family: 'Kanit', sans-serif;
+}
+
+body {
+    display: grid;
+    height: 100vh;
+    
+}
+
+.header{
+    display: flex;
+    align-content: flex-start;
+    justify-content: end;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+
+.navbar{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+
+
+    padding: 0;
+}
+
+
+div {
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.Upper_half{
+    background-color: brown;
+}
+
+.lower_half{
+    background-color: limegreen;
+}
