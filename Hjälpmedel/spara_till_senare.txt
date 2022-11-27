@@ -25,3 +25,55 @@
             Potatis
         </article>
      </div>
+
+
+     @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Patrick+Hand&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flexbox;
+}
+
+
+.header_top{
+  border: 1px solid black;
+  margin: 1rem;
+  padding: 2rem 2rem;
+  text-align: center;
+}
+
+.nav {
+  display: flexbox;
+  justify-content: center;
+}
+
+#navigation1{
+  display: inline-block; 
+  border: 4px solid red;
+  padding: 1rem 1rem;
+  vertical-align: middle;
+}
+
+#navigation2{
+  display: inline-block; 
+  border: 4px solid red;
+  padding: 1rem 1rem;
+  vertical-align: middle;
+}
+
+#navigation3{
+  display: inline-block; 
+  border: 4px solid red;
+  padding: 1rem 1rem;
+  vertical-align: middle;
+  
+}
+
+
+#titel {
+  display: inline-block;
+  justify-content: center;
+}

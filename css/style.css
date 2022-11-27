@@ -1,29 +1,90 @@
-@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Patrick+Hand&display=swap');
-
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    display: flexbox;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-
-.header_top{
-  border: 1px solid black;
-  margin: 1rem;
-  padding: 2rem 2rem;
-  text-align: center;
+h1 {
+  font-family: 'Courier New', Courier, monospace;
 }
 
-#navigation{
-  display: inline-block; 
-  border: 4px solid red;
-  padding: 1rem 1rem;
-  vertical-align: middle;
+h2 {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-#titel {
-  display: inline-block;
+#grid_wrapper {
+  display: grid;
+  height: 380vh;
+  grid-template-columns: auto;
+  grid-template-rows: 10vh ;
+  grid-template-areas: 
+  "na na na"
+  "s1 s1 s1"
+  "a1 a2 a3"
+  "s2 s2 s2"
+  "a4 a5 a6"
+  "s3 s3 s3"
+  "fo fo fo";
+}
+
+header {
+  grid-area: he;
+  background-color: coral;
   justify-content: center;
+  justify-content: flex-end;
+}
+
+nav {
+  grid-area: na;
+  background-color: darkmagenta;
+}
+
+#section1 {
+  grid-area: s1;
+  background: blueviolet;
+}
+
+#section2 {
+  grid-area: s2;
+  background: brown;
+}
+
+#section3 {
+  grid-area: s3;
+  background: dodgerblue;
+}
+
+#article1 {
+  grid-area: a1;
+  background: violet;
+}
+
+#article2 {
+  grid-area: a2;
+  background: rgb(39, 5, 39);
+}
+
+#article3 {
+  grid-area: a3;
+  background: rgb(156, 12, 156);
+}
+
+#article4 {
+  grid-area: a4;
+  background: rgb(17, 6, 17);
+}
+
+#article5 {
+  grid-area: a5;
+  background: rgb(33, 139, 86);
+}
+
+#article6 {
+  grid-area: a6;
+  background: rgb(171, 173, 34);
+}
+
+footer {
+  background: green;
+  grid-area: fo;
 }
