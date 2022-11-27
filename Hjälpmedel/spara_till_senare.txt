@@ -77,3 +77,9 @@
   display: inline-block;
   justify-content: center;
 }
+
+ <section id="section1">
+        <h2>
+            sektion1
+         </h2>
+    </section>

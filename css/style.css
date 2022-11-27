@@ -13,6 +13,7 @@ h2 {
 }
 
 #grid_wrapper {
+  background-image: url(/img/mina_egna_bilder/lions.jpg);
   display: grid;
   height: 380vh;
   grid-template-columns: auto;
@@ -27,64 +28,73 @@ h2 {
   "fo fo fo";
 }
 
+
+
+
 header {
-  grid-area: he;
-  background-color: coral;
   justify-content: center;
   justify-content: flex-end;
+  padding: 35px;
+  
+}
+
+header:hover {
+ background: black;
+  opacity: 90%;
 }
 
 nav {
+  background-color: rgb(97, 47, 47);
+  opacity: 20%;
   grid-area: na;
-  background-color: darkmagenta;
+  
 }
 
 #section1 {
   grid-area: s1;
-  background: blueviolet;
+  
+  
 }
 
 #section2 {
   grid-area: s2;
-  background: brown;
+  
 }
 
 #section3 {
   grid-area: s3;
-  background: dodgerblue;
+  
 }
 
 #article1 {
   grid-area: a1;
-  background: violet;
+  
 }
 
 #article2 {
   grid-area: a2;
-  background: rgb(39, 5, 39);
+  
 }
 
 #article3 {
   grid-area: a3;
-  background: rgb(156, 12, 156);
+  
 }
 
 #article4 {
   grid-area: a4;
-  background: rgb(17, 6, 17);
 }
 
 #article5 {
   grid-area: a5;
-  background: rgb(33, 139, 86);
+  
 }
 
 #article6 {
   grid-area: a6;
-  background: rgb(171, 173, 34);
+ 
 }
 
 footer {
-  background: green;
   grid-area: fo;
 }
