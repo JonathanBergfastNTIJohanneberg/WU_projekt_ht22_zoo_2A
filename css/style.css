@@ -13,7 +13,7 @@ h2 {
 }
 
 #grid_wrapper {
-  background-image: url(/img/mina_egna_bilder/lions.jpg);
+  background-image: url(/img/mina_egna_bilder/lions.jpg) ;
   display: grid;
   height: 380vh;
   grid-template-columns: auto;
@@ -29,7 +29,11 @@ h2 {
 }
 
 
-
+img {
+  max-width: 100%;
+  height: auto;
+  width: auto;
+}
 
 header {
   justify-content: center;
