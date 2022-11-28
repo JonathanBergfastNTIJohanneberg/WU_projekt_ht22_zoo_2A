@@ -16,10 +16,10 @@ h2 {
   background-image: url(/img/mina_egna_bilder/lions.jpg) ;
   display: grid;
   height: 380vh;
-  grid-template-columns: auto;
-  grid-template-rows: 10vh ;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 250px 100px 200px 400px 200px 300px minmax(200px, 1fr);
   grid-template-areas: 
-  "na na na"
+  "he he he"
   "s1 s1 s1"
   "a1 a2 a3"
   "s2 s2 s2"
@@ -36,22 +36,35 @@ img {
 }
 
 header {
-  justify-content: center;
+  display: flex;
+  grid-area: he;
   justify-content: flex-end;
-  padding: 35px;
   
 }
 
 header:hover {
  background: black;
-  opacity: 90%;
+  opacity: 40%;
 }
 
 nav {
-  background-color: rgb(97, 47, 47);
-  opacity: 20%;
-  grid-area: na;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(49, 50, 52, 0.26);
+  width: 500px;
   
+}
+
+nav.information {
+  border-style: groove;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.information {
+  padding: 5px;
+  border-style: groove;
+  background: red;
 }
 
 #section1 {
@@ -67,6 +80,7 @@ nav {
 
 #section3 {
   grid-area: s3;
+  background: black;
   
 }
 
