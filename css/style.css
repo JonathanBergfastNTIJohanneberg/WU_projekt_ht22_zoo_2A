@@ -47,12 +47,31 @@ header:hover {
   opacity: 40%;
 }
 
+
+a:link, a:visited {
+  background-color: #f44336;
+  color: white;
+  text-align: center;
+  display: inline-block;
+  text-decoration: none;
+}
+
+a:hover, a:active {
+  background-color: red;
+}
+
+
+nav:hover {
+  z-index: 1;
+}
+
 nav {
   display: flex;
   justify-content: space-between;
   background-color: rgba(49, 50, 52, 0.26);
-  width: 500px;
-  
+  width: 293px;
+  height: fit-content;
+  border-radius: 10px;
 }
 
 nav.information {
@@ -64,7 +83,9 @@ nav.information {
 .information {
   padding: 5px;
   border-style: groove;
-  background: red;
+  border-radius: 10px;
+  background-color: #f44336;
+  height: auto;
 }
 
 #section1 {
