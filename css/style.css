@@ -16,7 +16,7 @@ h2 {
   display: grid;
   height: 380vh;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 250px 400px 200px 400px 200px 300px minmax(200px, 1fr);
+  grid-template-rows: 250px 400px 350px 400px 200px 300px minmax(200px, 1fr);
   grid-template-areas: 
   "he he he"
   "s1 s1 s1"
@@ -60,7 +60,7 @@ a:link, a:visited {
 
 a:hover, a:active {
   background-color: rgb(0, 0, 0);
-  transition-duration: 1s;
+  transition-duration: s;
   position: relative;
 }
 
@@ -130,14 +130,14 @@ nav.information {
 .prev, .next {
   cursor: pointer;
   position: absolute;
-  top: 50%;
+  top: 75%;
   width: auto;
   margin-top: -22px;
   padding: 16px;
-  color: rgb(207, 58, 58);
+  color: rgb(255, 255, 255);
   font-weight: bold;
   font-size: 18px;
-  transition: 0.6s ease;
+  transition: 0.5s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
 }
@@ -148,11 +148,11 @@ nav.information {
 }
 
 .prev:hover, .next:hover {
-  background-color: rgba(130, 21, 21, 0.8);
+  background-color: rgb(236, 14, 14);
 }
 
 .text {
-  color: #8f2a2a;
+  color: #ffffff;
   font-size: 15px;
   padding: 8px 12px;
   position: absolute;
@@ -162,7 +162,7 @@ nav.information {
 }
 
 .numbertext1 {
-  color: #311212;
+  color: #e71515;
   font-size: 12px;
   padding: 8px 12px;
   position: absolute;
@@ -170,7 +170,7 @@ nav.information {
 }
 
 .numbertext2 {
-  color: #f2f2f2;
+  color: #c91b1b;
   font-size: 12px;
   padding: 8px 12px;
   position: absolute;
@@ -178,7 +178,7 @@ nav.information {
 }
 
 .numbertext3 {
-  color: #f2f2f2;
+  color: #e11e1e;
   font-size: 12px;
   padding: 8px 12px;
   position: absolute;
@@ -190,7 +190,7 @@ nav.information {
   height: 15px;
   width: 15px;
   margin: 0 2px;
-  background-color: rgb(176, 7, 7);
+  background-color: rgb(156, 19, 19);
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
@@ -200,7 +200,6 @@ nav.information {
   background-color: #941818;
 }
 
-/* Fading animation */
 .fade {
   animation-name: fade;
   animation-duration: 1.5s;
@@ -213,7 +212,7 @@ nav.information {
 
 #section1 {
   grid-area: s1;
-  background-color: black;
+  background-color: rgb(255, 255, 255);
   
 }
 
@@ -229,33 +228,40 @@ nav.information {
 
 #article1 {
   grid-area: a1;
-  background-color: bisque;
+  background-color: white;
+  border-radius: 30px;
+  justify-content: center;
+
 }
 
 #article2 {
   grid-area: a2;
+  border-radius: 30px;
   background-color: #f44336;
-  
 }
 
 #article3 {
   grid-area: a3;
+  border-radius: 30px;
   background-color: beige;
 }
 
 #article4 {
   grid-area: a4;
+  border-radius: 30px;
   background-color: magenta;
 }
 
 #article5 {
   grid-area: a5;
+  border-radius: 30px;
   background-color: blueviolet;
   
 }
 
 #article6 {
   grid-area: a6;
+  border-radius: 30px;
   background-color: orange;
  
 }
