@@ -13,21 +13,53 @@
 
    <div id="grid_wrapper">
 
-    <header>
+
+    
+ <header>
+     <div id="navbar">
         <nav>
             <h3 class="information"><a href="/htmlkod/AboutUS.html">About Us</a></h3>
             <h3 class="information"><a href="/htmlkod/Contacts.html">Contacts</a></h3>
             <h3 class="information" ><a href="/htmlkod/någonting.html">Någonting</a></h3>
         </nav>
+    </div>
+ </header>
 
-    </header>
 
+ <section id="section1">
+<div class="slideshow_container">
 
-    <section id="section1">
-        <h2>
-            sektion1
-         </h2>
-    </section>
+    <div class="mySlides_fade">
+        <div class="numbertext1">1 av 3</div>
+        <img src="../img/animals/-lizards_-animals_-zoo_-istanbul_-turkey_-istanbulzoo_-tourism_(14304639363).jpeg" style="width:100%;">
+        <div class="text">Caption Text</div>
+    </div>
+
+    <div class="mySlides_fade">
+        <div class="numbertext2">2 av 3</div>
+        <img src="../img/animals/rs=w_365,h_365,cg_true.webp" style="width:100%;">
+        <div class="text">Caption Two</div>
+    </div>
+ 
+    <div class="mySlides_fade">
+        <div class="numbertext3">3 av 3</div>
+        <img src="../img/animals/meerkats-zoo-animals-zoological-garden-preview.jpeg" style="width:100%;">
+        <div class="text">Caption Three</div>
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+
+</section>
 
     <section id="section2">
         <h2>
@@ -69,10 +101,51 @@
     <article id="article6">
         <h2>article6</h2>
     </article>
-
-
-
-
    </div>
+    
+   <script>
+    window.onscroll = function() {myFunction()};
+    
+    var navbar = document.getElementById("navbar");
+    var sticky = navbar.offsetTop;
+    
+    function myFunction() {
+      if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky")
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    }
+
+    
+        let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+    </script>
+
+
 </body>
 </html>
