@@ -1,3 +1,7 @@
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -5,28 +9,28 @@
 }
 
 h1 {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
 }
 
 h2 {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 #grid_wrapper {
   display: grid;
   height: 380vh;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 250px 400px 350px 400px 200px 300px minmax(200px, 1fr);
-  grid-template-areas: 
-  "he he he"
-  "s1 s1 s1"
-  "a1 a2 a3"
-  "s2 s2 s2"
-  "a4 a5 a6"
-  "s3 s3 s3"
-  "fo fo fo";
+  grid-template-rows: 250px 400px 800px 1000px 800px 1000px minmax(200px, 1fr);
+  grid-template-areas:
+    "he he he"
+    "s1 s1 s1"
+    "a1 a2 a3"
+    "s2 s2 s2"
+    "a4 a5 a6"
+    "s3 s3 s3"
+    "fo fo fo";
 }
-
 
 img {
   max-width: 100%;
@@ -38,18 +42,17 @@ header {
   display: flex;
   grid-area: he;
   justify-content: flex-end;
-  
 }
 
 header:hover {
- background: black;
+  background: black;
   opacity: 40%;
   transition-duration: 2s;
   position: relative;
 }
 
-
-a:link, a:visited {
+a:link,
+a:visited {
   background-color: #f44336;
   color: white;
   text-align: center;
@@ -58,10 +61,10 @@ a:link, a:visited {
   border-radius: 5px;
 }
 
-a:hover, a:active {
+a:hover,
+a:active {
   background-color: rgb(0, 0, 0);
-  transition-duration: s;
-  position: relative;
+  transition-duration: 1s;
 }
 
 #navbar {
@@ -69,7 +72,7 @@ a:hover, a:active {
   justify-content: flex-end;
 }
 
-#navbar a{
+#navbar a {
   float: right;
   display: flex;
   color: #ffffff;
@@ -92,8 +95,6 @@ a:hover, a:active {
 .sticky + .content {
   padding-top: 10px;
 }
-
-
 
 nav {
   display: flex;
@@ -127,17 +128,18 @@ nav.information {
   display: none;
 }
 
-.prev, .next {
+.prev,
+.next {
   cursor: pointer;
   position: absolute;
-  top: 75%;
+  top: 50%;
   width: auto;
   margin-top: -22px;
   padding: 16px;
-  color: rgb(255, 255, 255);
+  color: rgb(207, 58, 58);
   font-weight: bold;
   font-size: 18px;
-  transition: 0.5s ease;
+  transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
 }
@@ -148,11 +150,11 @@ nav.information {
 }
 
 .prev:hover, .next:hover {
-  background-color: rgb(236, 14, 14);
+  background-color: rgba(0,0,0,0.8);
 }
 
 .text {
-  color: #ffffff;
+  color: #f2f2f2;
   font-size: 15px;
   padding: 8px 12px;
   position: absolute;
@@ -162,7 +164,7 @@ nav.information {
 }
 
 .numbertext1 {
-  color: #e71515;
+  color: #311212;
   font-size: 12px;
   padding: 8px 12px;
   position: absolute;
@@ -170,7 +172,7 @@ nav.information {
 }
 
 .numbertext2 {
-  color: #c91b1b;
+  color: #f2f2f2;
   font-size: 12px;
   padding: 8px 12px;
   position: absolute;
@@ -178,7 +180,7 @@ nav.information {
 }
 
 .numbertext3 {
-  color: #e11e1e;
+  color: #f2f2f2;
   font-size: 12px;
   padding: 8px 12px;
   position: absolute;
@@ -190,30 +192,34 @@ nav.information {
   height: 15px;
   width: 15px;
   margin: 0 2px;
-  background-color: rgb(156, 19, 19);
+  background-color: rgb(176, 7, 7);
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
 }
 
-.active, .dot:hover {
+.active,
+.dot:hover {
   background-color: #941818;
 }
+
 
 .fade {
   animation-name: fade;
   animation-duration: 1.5s;
-}
+} 
 
 @keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 #section1 {
   grid-area: s1;
-  background-color: rgb(255, 255, 255);
-  
 }
 
 #section2 {
@@ -228,42 +234,44 @@ nav.information {
 
 #article1 {
   grid-area: a1;
-  background-color: white;
   border-radius: 30px;
-  justify-content: center;
-
+  margin: 5px;
+  background-color: bisque;
 }
 
 #article2 {
   grid-area: a2;
   border-radius: 30px;
+  margin: 5px;
   background-color: #f44336;
 }
 
 #article3 {
   grid-area: a3;
   border-radius: 30px;
+  margin: 5px;
   background-color: beige;
 }
 
 #article4 {
   grid-area: a4;
   border-radius: 30px;
+  margin: 5px;
   background-color: magenta;
 }
 
 #article5 {
   grid-area: a5;
   border-radius: 30px;
+  margin: 5px;
   background-color: blueviolet;
-  
 }
 
 #article6 {
   grid-area: a6;
   border-radius: 30px;
+  margin: 5px;
   background-color: orange;
- 
 }
 
 footer {
