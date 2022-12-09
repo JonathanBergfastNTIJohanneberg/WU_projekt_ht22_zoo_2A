@@ -1,153 +1,89 @@
-
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <script type="module"></script>
+    <title>Horse Night Zoo</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/css/style.css">
-  <title>Horse Night Zoo</title>
-
-</head>
-
-<body>
-
-  <div id="grid_wrapper">
+  <body class="pancake-stack">
 
     <header>
-      <div id="navbar">
-        <nav>
-          <h3 class="information"><a href="/htmlkod/AboutUS.html">About Us</a></h3>
-          <h3 class="information"><a href="/htmlkod/Contacts.html">Contacts</a></h3>
-          <h3 class="information"><a href="/htmlkod/någonting.html">Någonting</a></h3>
-        </nav>
-      </div>
+      <nav>
+        <img src="../img/zoo_logo/Zoo_Logo.jpg" alt="Zoo_Logo">
+        <a href="../htmlkod/AboutUS.html">About Us</a>
+        <a href="../htmlkod/Contacts.html">Contacts</a>
+        <a href="../htmlkod/någonting.html">Någonting</a>
+      </nav>
+
+      <section id="slideshow">
+        <div class="slideshow-container">
+          <figure>
+            <img src="../img/animals/flamingo.jpeg" />
+            <figcaption>Caption Text</figcaption>
+          </figure>
+
+          <figure>
+            <img src="../img/animals/lodjur.webp" />
+            <figcaption>Caption Two</figcaption>
+          </figure>
+
+          <figure>
+            <img src="../img/animals/panda.jpeg"  id="panda"/>
+            <figcaption>Caption Three</figcaption>
+          </figure>
+
+          <button class="prev">&#10094;</button>
+          <button class="next">&#10095;</button>
+        </div>
+
+        <div class="dot-wrap">
+          <button class="dot"></button>
+          <button class="dot"></button>
+          <button class="dot"></button>
+        </div>
+      </section>
     </header>
+    <script src="../js/myscripts.js"></script>
+    <main>
+      <article>
+        <h2>article1</h2>
+      </article>
 
-    <section id="section1">
-      <div class="slideshow-container">
+      <article>
+        <h2>article2</h2>
+      </article>
 
-        <div class="mySlides_fade">
-          <div class="numbertext1">1 av 3</div>
-          <img src="../img/animals/flamingo.jpeg" style="width:100%;">
-          <div class="text">Caption Text</div>
-        </div>
+      <article>
+        <h2>article3</h2>
+      </article>
 
-        <div class="mySlides_fade">
-          <div class="numbertext2">2 av 3</div>
-          <img src="../img/animals/lodjur.webp" style="width:100%;">
-          <div class="text">Caption Two</div>
-        </div>
+      <section>
+        <h2>sektion2</h2>
+      </section>
 
-        <div class="mySlides_fade">
-          <div class="numbertext3">3 av 3</div>
-          <img src="../img/animals/panda.jpeg" style="width:100%;">
-          <div class="text">Caption Three</div>
-        </div>
+      <article>
+        <h2>article4</h2>
+      </article>
 
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      <article>
+        <h2>article5</h2>
+      </article>
 
-      </div>
-      <br>
+      <article>
+        <h2>article6</h2>
+      </article>
 
-      <div style="text-align:center">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
-      </div>
-
-    </section>
-
-    <section id="section2">
-      <h2>
-        sektion2
-      </h2>
-    </section>
-
-    <section id="section3">
-      <h2>
-        sektion3
-      </h2>
-    </section>
+      <section>
+        <h2>sektion3</h2>
+      </section>
+    </main>
 
     <footer>
       <h2>sidfot</h2>
     </footer>
-
-    <article id="article1">
-      <h2>article1</h2>
-    </article>
-
-    <article id="article2">
-      <h2>article2</h2>
-    </article>
-
-    <article id="article3">
-      <h2>article3</h2>
-    </article>
-
-    <article id="article4">
-      <h2>article4</h2>
-    </article>
-
-    <article id="article5">
-      <h2>article5</h2>
-    </article>
-
-    <article id="article6">
-      <h2>article6</h2>
-    </article>
-  </div>
-
-
-
-
-</body>
+  </body>
 </html>
-
-
-
-<script>
-  window.onscroll = function() {myFunction()};
- 
- var navbar = document.getElementById("navbar");
- var sticky = navbar.offsetTop;
- 
- function myFunction() {
-   if (window.pageYOffset >= sticky) {
-     navbar.classList.add("sticky")
-   } else {
-     navbar.classList.remove("sticky");
-   }
- }
-
- 
-     let slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-let i;
-let slides = document.getElementsByClassName("mySlides");
-let dots = document.getElementsByClassName("dot");
-if (n > slides.length) {slideIndex = 1}
-if (n < 1) {slideIndex = slides.length}
-for (i = 0; i < slides.length; i++) {
- slides[i].style.display = "none";
-}
-for (i = 0; i < dots.length; i++) {
- dots[i].className = dots[i].className.replace(" active", "");
-}
-slides[slideIndex-1].style.display = "block";
-dots[slideIndex-1].className += " active";
-}
- </script>

@@ -1,15 +1,30 @@
-@media only screen and (max-width: 300px) {
-  .prev, .next,.text {font-size: 11px}
+:root {
+  --navbar-height: 5rem;
 }
 
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
-h1 {
-  font-family: "Courier New", Courier, monospace;
+#panda {
+  width: 100%; 
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
 }
 
 h2 {
@@ -17,197 +32,135 @@ h2 {
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
-#grid_wrapper {
+body {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+body.pancake-stack {
+  min-height: 100vh;
+
   display: grid;
-  height: 380vh;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 250px 400px 800px 1000px 800px 1000px minmax(200px, 1fr);
-  grid-template-areas:
-    "he he he"
-    "s1 s1 s1"
-    "a1 a2 a3"
-    "s2 s2 s2"
-    "a4 a5 a6"
-    "s3 s3 s3"
-    "fo fo fo";
+  grid-template-rows: auto 1fr auto;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-  width: auto;
-}
-
-header {
-  display: flex;
-  grid-area: he;
-  justify-content: flex-end;
-}
-
-header:hover {
-  background: black;
-  opacity: 40%;
-  transition-duration: 2s;
-  position: relative;
-}
-
-a:link,
-a:visited {
-  background-color: #f44336;
-  color: white;
-  text-align: center;
-  display: inline-block;
-  text-decoration: none;
-  border-radius: 5px;
-}
-
-a:hover,
-a:active {
-  background-color: rgb(0, 0, 0);
-  transition-duration: 1s;
-}
-
-#navbar {
-  overflow: hidden;
-  justify-content: flex-end;
-}
-
-#navbar a {
-  float: right;
-  display: flex;
-  color: #ffffff;
-  text-align: center;
-  padding: 5px 5px 5px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-.content {
-  padding: 16px;
-}
-
-.sticky {
+header nav {
   position: fixed;
-  top: 0;
-  width: 100%;
-}
+  inset: 0 0 auto;
+  z-index: 3;
 
-.sticky + .content {
-  padding-top: 10px;
-}
+  height: var(
+    --navbar-height
+  ); /* I very rarely set fixed heights, but we need to here */
+  padding-inline: 1.5rem;
+  background-color: hsl(0 0% 0% / 0.3);
 
-nav {
   display: flex;
-  justify-content: space-between;
-  width: 293px;
-  height: fit-content;
-  border-radius: 10px;
+  gap: 1em;
+
+  color: whitesmoke;
+
+  transition: 2s;
 }
 
-nav.information {
-  border-style: groove;
-  margin-left: 10px;
-  margin-right: 10px;
+
+
+header nav h1 {
+  align-self: center;
+  margin-right: auto;
+
+  font-family: "Courier New", Courier, monospace;
 }
 
-.information {
-  padding: 5px;
-  border-style: groove;
-  border-radius: 10px;
+header nav:hover {
+  background-color: hsl(0 0% 0% / 0.6);
+}
+
+header nav a {
+  display: grid;
+  place-items: center;
+
+  padding-inline: 1em;
+}
+
+header nav a:is(:link, :visited) {
   background-color: #f44336;
-  height: auto;
+  width:140px;
+  height:50px;
+  align-self: center;
 }
 
-.slideshow-container {
-  max-width: 100%;
-  position: relative;
-  margin: auto;
+header nav a:is(:hover, :active) {
+  background-color: rgb(109, 34, 34);
 }
 
-.mySlides_fade {
-  display: none;
+header .slideshow-container {
+  display: grid;
 }
 
-.prev,
-.next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
+header .slideshow-container > * {
+  grid-area: 1 / 1;
+}
+
+header .slideshow-container figure {
+  display: grid;
+}
+
+header .slideshow-container figure > * {
+  grid-area: 1 / 1;
+}
+
+header .slideshow-container figcaption {
+  place-self: center;
+
+  justify-self: center;
+
+  color: white;
+  font-size: 3rem;
+}
+
+header .slideshow-container button {
+  align-self: center;
+
+  display: grid;
+  place-items: center;
+
+  width: 3em;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: hsl(0 0% 0% / 0.2);
+
   color: rgb(207, 58, 58);
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
+
   user-select: none;
 }
 
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
+header .slideshow-container button:first-of-type {
+  margin-left: 1rem;
 }
 
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+header .slideshow-container button:last-of-type {
+  justify-self: end;
+  margin-right: 1rem;
 }
 
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
+header .slideshow-container button:hover {
+  background-color: hsl(0 0% 0% / 0.3);
 }
 
-.numbertext1 {
-  color: #311212;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-.numbertext2 {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-.numbertext3 {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-.dot {
-  cursor: pointer;
-  height: 15px;
+header #slideshow header #slideshow .dot {
   width: 15px;
-  margin: 0 2px;
-  background-color: rgb(176, 7, 7);
+  aspect-ratio: 1;
+  background-color: hsl(0, 92%, 36%);
   border-radius: 50%;
-  display: inline-block;
   transition: background-color 0.6s ease;
 }
 
-.active,
-.dot:hover {
-  background-color: #941818;
+header #slideshow .dot:is(.active, :hover) {
+  background-color: hsl(0, 72%, 34%);
 }
-
-
-.fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
-} 
 
 @keyframes fade {
   from {
@@ -218,63 +171,77 @@ nav.information {
   }
 }
 
-#section1 {
-  grid-area: s1;
+header .fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
 }
 
-#section2 {
-  grid-area: s2;
+main {
+  justify-self: center;
+  width: min(90vw, 50rem);
+  margin-block: 1rem 1.5rem;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+main > * {
+  /* just due to the lack of content */
+  display: grid;
+  place-items: center;
+}
+
+main > section {
+  min-height: 8rem; /* just due to the lack of content */
+  grid-column: span 3;
+}
+
+main > section:first-of-type {
   background-color: brown;
 }
 
-#section3 {
-  grid-area: s3;
+main > section:last-of-type {
   background-color: aqua;
 }
 
-#article1 {
-  grid-area: a1;
-  border-radius: 30px;
-  margin: 5px;
+main > article {
+  min-height: 5rem; /* just due to the lack of content */
+  border-radius: 0.5em;
+}
+
+main > article:first-of-type {
   background-color: bisque;
 }
 
-#article2 {
-  grid-area: a2;
-  border-radius: 30px;
-  margin: 5px;
+main > article:nth-of-type(2) {
   background-color: #f44336;
 }
 
-#article3 {
-  grid-area: a3;
-  border-radius: 30px;
-  margin: 5px;
+main > article:nth-of-type(3) {
   background-color: beige;
 }
 
-#article4 {
-  grid-area: a4;
-  border-radius: 30px;
-  margin: 5px;
+main > article:nth-of-type(4) {
   background-color: magenta;
 }
 
-#article5 {
-  grid-area: a5;
-  border-radius: 30px;
-  margin: 5px;
+main > article:nth-of-type(5) {
   background-color: blueviolet;
 }
 
-#article6 {
-  grid-area: a6;
-  border-radius: 30px;
-  margin: 5px;
+main > article:last-of-type {
   background-color: orange;
 }
 
 footer {
-  grid-area: fo;
+  padding-block: 1rem;
   background-color: brown;
+  text-align: center;
+}
+
+.pancake-stack_v4 {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
 }
