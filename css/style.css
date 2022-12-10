@@ -8,10 +8,7 @@
   margin: 0;
 }
 
-#panda {
-  width: 100%; 
-  height: auto;
-}
+
 
 a {
   text-decoration: none;
@@ -38,9 +35,11 @@ body {
 
 body.pancake-stack {
   min-height: 100vh;
-
-  display: grid;
+  display: flex;
   grid-template-rows: auto 1fr auto;
+  background: #222;
+  align-items: center;
+  justify-content: center;
 }
 
 header nav {
@@ -76,7 +75,7 @@ header nav:hover {
 }
 
 header nav a {
-  display: grid;
+  
   place-items: center;
 
   padding-inline: 1em;
@@ -94,7 +93,7 @@ header nav a:is(:hover, :active) {
 }
 
 header .slideshow-container {
-  display: grid;
+ 
 }
 
 header .slideshow-container > * {
@@ -244,4 +243,13 @@ footer {
   display: grid;
   grid-template-rows: auto 1fr auto;
   height: 100vh;
+}
+
+.swiper {
+  width: 80%;
+  height: fit-content;
+}
+
+.swiper-slide img{
+  width: 100%;
 }

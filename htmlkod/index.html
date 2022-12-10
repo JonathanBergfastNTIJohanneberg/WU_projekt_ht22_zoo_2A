@@ -6,10 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/style.css" />
     <script type="module"></script>
+    <link rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
     <title>Horse Night Zoo</title>
   </head>
 
   <body class="pancake-stack">
+
+    <div class="swiper">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide"> <img src="../img/animals/panda.jpeg" id="panda"></div>
+        <div class="swiper-slide"> <img src="../img/animals/lizard.jpeg" id="panda"></div>
+        <div class="swiper-slide"> <img src="../img/animals/surigater.jpeg" id="panda"></div>
+
+      </div>
+      <!-- If we need pagination -->
+      <div class="swiper-pagination"></div>
+    
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+
 
     <header>
       <nav>
@@ -18,36 +37,7 @@
         <a href="../htmlkod/Contacts.html">Contacts</a>
         <a href="../htmlkod/någonting.html">Någonting</a>
       </nav>
-
-      <section id="slideshow">
-        <div class="slideshow-container">
-          <figure>
-            <img src="../img/animals/flamingo.jpeg" />
-            <figcaption>Caption Text</figcaption>
-          </figure>
-
-          <figure>
-            <img src="../img/animals/lodjur.webp" />
-            <figcaption>Caption Two</figcaption>
-          </figure>
-
-          <figure>
-            <img src="../img/animals/panda.jpeg"  id="panda"/>
-            <figcaption>Caption Three</figcaption>
-          </figure>
-
-          <button class="prev">&#10094;</button>
-          <button class="next">&#10095;</button>
-        </div>
-
-        <div class="dot-wrap">
-          <button class="dot"></button>
-          <button class="dot"></button>
-          <button class="dot"></button>
-        </div>
-      </section>
     </header>
-    <script src="../js/myscripts.js"></script>
     <main>
       <article>
         <h2>article1</h2>
@@ -85,5 +75,21 @@
     <footer>
       <h2>sidfot</h2>
     </footer>
+
+    <script>
+      const swiper = new Swiper('.swiper', {
+  loop: true,
+  
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
+    </script>
+
   </body>
 </html>
