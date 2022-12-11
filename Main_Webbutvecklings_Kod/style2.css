@@ -88,6 +88,10 @@
   
 	user-select: none;
   }
+
+  article {
+	justify-content: space-between;
+  }
   
   #article_1 .right {
 	color: #fff;
@@ -352,6 +356,7 @@
   
   .articles {
 	display: flex;
+	flex-basis: 30%;
 	padding: 30px 30px;
 	cursor: pointer;
 	width: 400px;
