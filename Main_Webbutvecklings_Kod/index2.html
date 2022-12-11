@@ -1,98 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style2.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
-    <title>Horse Night Zoo</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style2.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Horse Night Zoo</title>
 </head>
 
 <div class="myDiv">
 
-<body class="pancake-stacking">
+  <body class="pancake-stacking">
 
     <div class="swiper">
 
-    <div class="swiper-wrapper">
-        
-    <div class="swiper-slide"><img src="../img/mina_egna_bilder/lions.jpg"></div>
-    <div class="swiper-slide"><img src="../img/mina_egna_bilder/panda.jpg"></div>
-    <div class="swiper-slide"><img src="../img/mina_egna_bilder/panda.jpg"></div>
-    
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide"><img src="../img/mina_egna_bilder/lions.jpg"></div>
+        <div class="swiper-slide"><img src="../img/mina_egna_bilder/panda.jpg"></div>
+        <div class="swiper-slide"><img src="../img/mina_egna_bilder/panda.jpg"></div>
+
+      </div>
+
+      <div class="swiper-pagination"></div>
+
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
     </div>
 
-    <div class="swiper-pagination"></div>
-  
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
-    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
-
-
-<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-
-<script>
-    const swiper = new Swiper('.swiper', {
+    <script>
+      const swiper = new Swiper('.swiper', {
         autoplay: {
-            delay: 3000,
-            disableOnInteraction: false, 
+          delay: 3000,
+          disableOnInteraction: false,
         },
-  loop: true,
+        loop: true,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      });
+    </script>
 
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
+    <header>
+      <nav>
+        <button class="button" role="button"><a href="../Main_Webbutvecklings_Kod/AboutUS.html">About Us</a></button>
+        <button class="button" role="button"><a href="../Main_Webbutvecklings_Kod/Contacts.html">Contacts</a></button>
+        <button class="button" role="button"><a href="../Main_Webbutvecklings_Kod/någonting.html">Resurang</a></button>
+      </nav>
+    </header>
 
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-});
-</script>
+    <main>
 
-<header>
-  <nav>
-    <button class="button" role="button"><a href="../Main_Webbutvecklings_Kod/AboutUS.html">About Us</a></button>
-    <button class="button" role="button"><a href="../Main_Webbutvecklings_Kod/Contacts.html">Contacts</a></button>
-    <button class="button" role="button"><a href="../Main_Webbutvecklings_Kod/någonting.html">Resurang</a></button>
-  </nav>
-</header>
-
-
-<main>
-
-
-  <article class="articles" >
-    <!-- ta bort p taggarna och byt ut de med relevanta css regler, använd istället någonting som detta display:flex
+      <article class="articles" id="article_1">
+        <!-- ta bort p taggarna och byt ut de med relevanta css regler, använd istället någonting som detta display:flex
 flex-direction: column -->
-    <h2 class="h2_articles">PLAN YOUR<br> <p id="tickets-1">Visit</p> <p id="tickets-2">Know Before You Go</p></h2>
-    <div class="right"></div>
-  </article>
+        <h2 class="h2_articles">PLAN YOUR<br>
+          <p id="tickets-1">Visit</p>
+          <p id="tickets-2">Know Before You Go</p>
+        </h2>
+        <div class="right"></div>
+      </article>
 
-  <article class="articles">
-    <h2 class="h2_articles">PLAN YOUR<br> <p id="tickets-1">Visit</p> <p id="tickets-2">Know Before You Go</p></h2>
-    <div class="right"></div>
-  </article>
+      <article class="articles" id="article_2">
+        <h2 class="h2_articles">PLAN YOUR<br>
+          <p id="tickets-1">Visit</p>
+          <p id="tickets-2">Know Before You Go</p>
+        </h2>
+        <div class="right"></div>
+      </article>
 
-  <article class="articles">
-    <h2 class="h2_articles">PLAN YOUR<br> <p id="tickets-1">Visit</p> <p id="tickets-2">Know Before You Go</p></h2>
-    <div class="right"></div>
-  </article>
+      <article class="articles" id="article_3" >
+        <h2 class="h2_articles">PLAN YOUR<br>
+          <p id="tickets-1">Visit</p>
+          <p id="tickets-2">Know Before You Go</p>
+        </h2>
+        <div class="right"></div>
+      </article>
 
-  <article class="articles" id="article_4">
-    <h2 class="h2_articles">PLAN YOUR<br> <p id="tickets-1">Visit</p> <p id="tickets-2">Know Before You Go</p></h2>
-  </article>
+      <article class="articles" id="article_4">
+        <h2 class="h2_articles">PLAN YOUR<br>
+          <p id="tickets-1">Visit</p>
+          <p id="tickets-2">Know Before You Go</p>
+        </h2>
+      </article>
 
-  <article class="articles" id="article_5">
-    <h2 class="h2_articles">PLAN YOUR<br> <p id="tickets-1">Visit</p> <p id="tickets-2">Know Before You Go</p></h2>
-  </article>
-  
+      <article class="articles" id="article_5">
+        <h2 class="h2_articles">PLAN YOUR<br>
+          <p id="tickets-1">Visit</p>
+          <p id="tickets-2">Know Before You Go</p>
+        </h2>
+      </article>
 
-</main>
+    </main>
 
 </div>
 
@@ -116,7 +125,8 @@ flex-direction: column -->
   </footer>
 
 </div>
-</main>
+
 
 </body>
+
 </html>
