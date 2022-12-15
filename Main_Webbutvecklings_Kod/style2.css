@@ -27,6 +27,7 @@
 	inset: 0 0 auto;
 	z-index: 3;
 	justify-content: end;
+	align-items: center;
   
 	height: var(--navbar-height);
 	padding-inline: 1.5rem;
@@ -39,14 +40,28 @@
   
 	transition: 2s;
   }
+
+  .landpage_titel {
+	border: 4px inset #ff6550;
+	border-radius: 10px;
+  }
+
+  .landpage_titel:hover {
+	text-shadow: 2px 2px 8px rgba(255, 0, 0, 0.61);
+	transition: 2s;
+  }
+
+  .header {
+	justify-content: space-between;
+  }
   
   header nav h1 {
 	align-self: center;
 	margin-right: auto;
-  
 	font-family: "Courier New", Courier, monospace;
   }
-  
+
+
   header nav:hover {
 	background-color: hsl(0 0% 0% / 0.6);
   }
@@ -58,9 +73,9 @@
   }
   
   header nav a:is(:link, :visited) {
-	width: 140px;
-	height: 50px;
-	align-self: center;
+	width: auto;
+	height: 40px;
+	justify-self: center;
   }
   
   .swiper {
@@ -406,7 +421,7 @@
   }
 
   main > #article_3:hover {
-	background: rgb(240, 95, 50);
+	background: #f05f32;
 	transition: 0.6s ease;
   }
 
@@ -464,4 +479,3 @@
   #article_5 {
 	height: 500px;
   }
-  
