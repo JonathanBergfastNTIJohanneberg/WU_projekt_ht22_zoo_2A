@@ -1,3 +1,4 @@
+
 :root {
 	--navbar-height: 3rem;
   }
@@ -479,3 +480,114 @@
   #article_5 {
 	height: 500px;
   }
+
+ .pancake-stacking-about-us {
+	background: #222;
+
+ }
+ 
+
+ .container {
+	text-align: center;
+	background: #222;
+ }
+
+
+ .sub-container {
+	max-width: 1200px;
+	margin: auto;
+	padding: 30px 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	position: relative; 
+	height: 450px;
+	color: #ffffff;
+	padding-top: 140px;
+	text-align: center;
+	width: 100%;
+ }
+
+ 
+
+
+ .teams {
+	margin: 10px;
+	padding: 22px;
+	max-width: 30%;
+	cursor: pointer;
+	transition: 0.4s; box-sizing: border-box;
+ }
+
+
+
+ .teams:hover {
+	background: rgba(221, 221, 221, 0.616);
+	border-radius: 12px;
+ }
+ 
+
+ .teams img {
+	width: 200px;
+	height: 200px;
+ }
+
+ .name {
+	padding: 12px;
+	font-weight: bold;
+	font-size: 16px;
+	text-transform: uppercase;
+ }
+
+ .desig{
+	font-style: italic;
+	color: #777;
+ }
+
+ .about {
+	margin: 20px 0;
+	font-weight: lighter;
+	color: #4e4e4e;
+ }
+
+ .social-links {
+	margin: 14px;
+ }
+
+ .social-links a  {
+	display: inline-block;
+	height: 30px;
+	width: 30px;
+	transition: .4s;
+ }
+
+
+ .social-links a:hover {
+	transform: scale(1.5);
+ }
+
+ .social-links a  i{
+	color: #444;
+ }
+
+ .header_2 {
+	height: 400px;
+	position: relative;
+	width: 100%;
+	background-image: url(../images/aston-martin.jpg);
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+ }
+
+ .header_2 img {
+	width: 100%;
+ }
+
+ 
+
+ @media screen and (max-width:600px) {
+	.teams {
+		max-width: 100%;
+	}
+ }
