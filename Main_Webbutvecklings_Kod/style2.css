@@ -271,6 +271,7 @@
   }
   
   .footer-content {
+	
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -574,7 +575,7 @@
 	height: 400px;
 	position: relative;
 	width: 100%;
-	background-image: url(../images/aston-martin.jpg);
+	background-image: url(../img/mina_egna_bilder/cabybara.jpg);
 	background-size: cover;
 	background-position: center center;
 	background-attachment: fixed;
@@ -590,4 +591,19 @@
 	.teams {
 		max-width: 100%;
 	}
+ }
+
+ .content {
+	position: relative; 
+	top: 100px;
+ }
+
+
+ #footer_about_us {
+	position:relative; 
+	top: 9rem;
+ }
+
+ .pancak-stacking-resturant {
+	background-color: linear-gradient( bottom, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
  }
