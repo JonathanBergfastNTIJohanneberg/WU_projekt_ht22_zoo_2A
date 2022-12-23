@@ -605,5 +605,83 @@
  }
 
  .pancak-stacking-resturant {
-	background-color: linear-gradient( bottom, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+	background-color: #222
  }
+
+ .grid_wrapper_resturant{
+	display: grid;
+	grid-area: 
+	"ca1 . . ca2 . . ca3"
+	"ca4 . . ca5 . . ca6" 
+	"ca7 . . ca8 . . ca9";
+ }
+
+ #card_1{
+	height: 400px;
+	width: 300px;
+	color: tomato;
+	grid-area: ca1;
+
+ }
+
+ #card_2{
+	height: 400px;
+	width: 300px;
+	color: rgb(241, 103, 65);
+	
+
+}
+
+#card_3{
+	height: 400px;
+	width: 300px;
+	color: #6d3310;
+	
+
+}
+
+#card_4{
+	height: 400px;
+	width: 300px;
+	color: #f05f32;
+	
+
+}
+
+#card_5{
+	height: 400px;
+	width: 300px;
+	color: #f05f32;
+
+}
+
+#card_6{
+	height: 400px;
+	width: 300px;
+	color: #ef4765;
+	
+
+}
+
+#card_7{
+	height: 400px;
+	width: 300px;
+	color: #f05f32;
+	
+
+}
+
+#card_8{
+	height: 400px;
+	width: 300px;
+	color: #ff6550;
+	
+
+}
+
+#card_9{
+	height: 400px;
+	width: 300px;
+	color: #ef4765;
+
+}
