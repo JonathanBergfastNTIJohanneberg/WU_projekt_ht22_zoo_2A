@@ -604,84 +604,42 @@
 	top: 9rem;
  }
 
+
+ 
  .pancak-stacking-resturant {
 	background-color: #222
- }
-
- .grid_wrapper_resturant{
-	display: grid;
-	grid-area: 
-	"ca1 . . ca2 . . ca3"
-	"ca4 . . ca5 . . ca6" 
-	"ca7 . . ca8 . . ca9";
- }
-
- #card_1{
-	height: 400px;
-	width: 300px;
-	color: tomato;
-	grid-area: ca1;
-
- }
-
- #card_2{
-	height: 400px;
-	width: 300px;
-	color: rgb(241, 103, 65);
 	
-
 }
 
-#card_3{
-	height: 400px;
-	width: 300px;
-	color: #6d3310;
-	
+.cards {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+display: grid;
+grid-template-columns: 300px;
+grid-template-rows: 210px 210px 50px;
+grid-template-areas: 
+"image"
+"text"
+;
+font-family: roboto;
+border-radius: 18px;
 
+box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+text-align: center;
 }
 
-#card_4{
-	height: 400px;
-	width: 300px;
-	color: #f05f32;
-	
 
+.card-image {
+background: white; 
+grid-area: image;
 }
 
-#card_5{
-	height: 400px;
-	width: 300px;
-	color: #f05f32;
-
+.card-text {
+grid-area: text;
 }
 
-#card_6{
-	height: 400px;
-	width: 300px;
-	color: #ef4765;
-	
 
-}
 
-#card_7{
-	height: 400px;
-	width: 300px;
-	color: #f05f32;
-	
-
-}
-
-#card_8{
-	height: 400px;
-	width: 300px;
-	color: #ff6550;
-	
-
-}
-
-#card_9{
-	height: 400px;
-	width: 300px;
-	color: #ef4765;
-
-}
+ 
