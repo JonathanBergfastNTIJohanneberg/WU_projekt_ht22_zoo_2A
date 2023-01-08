@@ -612,10 +612,7 @@
 }
 
 .cards {
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
+
 display: grid;
 grid-template-columns: 300px;
 grid-template-rows: 210px 210px 50px;
@@ -628,18 +625,70 @@ border-radius: 18px;
 
 box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
 text-align: center;
+
 }
 
 
-.card-image {
-background: white; 
-grid-area: image;
+
+
+.card-image1 {
+	background: url(/img/food/berries.jpeg);
+	background-size: cover;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+	grid-area: image;
+   width: 100%; 
+   height: 100%; 
+}
+
+.card-image2 {
+	background: url(/img/food/pizza.webp);
+	background-size: cover;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+	grid-area: image;
+   width: 100%; 
+   height: 100%; 
+}
+
+.card-image3 {
+	background: url(/img/food/korv_pommes.jpeg);
+	background-size: cover;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+	grid-area: image;
+   width: 100%; 
+   height: 100%; 
+}
+
+.card-image4 {
+	background: url(/img/food/pommes_bread.jpeg);
+	background-size: cover;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+	grid-area: image;
+   width: 100%; 
+   height: 100%; 
 }
 
 .card-text {
 grid-area: text;
 }
 
+.resturant {
+	color: white;
+	padding: 10px;
+}
 
 
- 
+#resturant_main {
+	position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-right: -50%;
+      transform: translate(-50%, -50%);
+	margin-block: 1rem 1.5rem;
+	display: grid;
+	grid-template-columns: repeat(4, min-content); 
+	gap: 4rem;
+}
