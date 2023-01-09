@@ -575,7 +575,7 @@ main>#article_3:hover .right {
 	height: 400px;
 	position: relative;
 	width: 100%;
-	background-image: url(../img/mina_egna_bilder/cabybara.jpg);
+	background-image: url(/img/mina_egna_bilder/cabybara.jpg);
 	background-size: cover;
 	background-position: center center;
 	background-attachment: fixed;
